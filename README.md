@@ -6,6 +6,14 @@
 
 ---
 
+## 上车识别效果
+
+<p align="center">
+  <img src="assets/demo/onboard-recognition-18s-28s.gif" alt="上车识别全流程测试（18–28 秒）" width="720" />
+</p>
+
+---
+
 ## 编译与运行
 
 ```bash
