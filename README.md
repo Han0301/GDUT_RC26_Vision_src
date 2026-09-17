@@ -6,38 +6,6 @@
 
 ---
 
-## 项目背景
-
-`merge_ws` 系列是 RC26 竞赛机器人的 **上车运行融合代码**。
-
-早期在 `camera_ws` 和 `world_ws` 中分别验证了相机检测和 Z-buffer 感知算法，`merge_ws` 负责将这些算法整合到统一的 ROS 节点中，在真实 RoboMaster / RoboCup 机器人上运行。
-
-从最初的单传感器简单融合逐步演变为多传感器（相机 × 2、激光雷达 × 2、里程计、IMU）、多通道（视觉、激光、Z-buffer）、具备上位机交互和竞赛功能支持的完整系统。
-
-## 系统架构
-
-```
-工控机 (ROS Master)
-├── 传感器层
-│   ├── 相机 × 2 (USB + RealSense)
-│   ├── 激光雷达 × 2 (Livox MID-360)
-│   ├── 轮式里程计
-│   └── IMU
-├── 感知层
-│   ├── 视觉检测 (YOLOv11 + PnP)
-│   ├── 激光雷达识别 (LiDAR Recognition)
-│   ├── Z-buffer 遮挡处理
-│   └── 多传感器融合 (Merge Node)
-├── 决策层
-│   ├── 上层决策 (Superstratum)
-│   ├── 运动控制 (Control)
-│   └── 标定模块 (Calibration)
-└── 运维层
-    ├── 上位机监控 (Shell Monitor 2)
-    ├── 设备自检 (Self-Inspection)
-    └── 参数配置 (Parameter System)
-```
-
 ## 编译与运行
 
 ```bash
