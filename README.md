@@ -1,7 +1,8 @@
-# RC26 Vision src — 上车融合代码工作区
+# RC26 Vision src
 
-> 多传感器融合感知框架，从 merge_ws20 到 rc_ws2 共 12 个版本的完整迭代。
-> 运行在 RC26 竞赛机器人上，整合相机、激光雷达、Z-buffer 遮挡处理、YOLO 检测等模块。
+> RC2026，视觉组车上代码， 融合相机、激光雷达、与下位机通信等等。
+> 主要贡献者： 神(maple)： https://github.com/mapleDynamicX 整体框架的搭建，雷达的全场定位
+> 我主要负责相机部分，全场识别和kfs定位，apriltag标记识别等等
 
 ---
 
